@@ -1,0 +1,19 @@
+IKEA furniture 
+website:https://www.ikea.com/in/en/cat/lower-price/?sort=RATING&filters=f-subcategories%3Afu001
+
+products:
+ url: class=plp-price-module__information   [to click on products]
+name:class=pip-header-section__title--big notranslate  [to get name ]
+description: class=pip-header-section__title--big notranslate[to get description]
+price: class=pip-temp-price-module__primary-currency-price[to get price]
+image: src=pip-temp-price-module__primary-currency-price[for image]
+
+product details:
+url:xpath=//*[@id="pip-product-information-section-list-0"]/button/span[1]/span/span/span 
+details:class=//*[@id="pip-product-information-section-list-0"]/button/span[1]/span/span/span
+closebtnn:class=pip-btn pip-btn--small pip-btn--icon-primary-inverse pip-modal-header__close [to close the product details frame]
+
+measurements:
+url:xpath=//*[@id="pip-product-information-section-list-2"]/button/span[1]/span/span/span
+dimensionstext:class=//*[@id="pip-product-information-section-list-2"]/button/span[1]/span/span/span
+image:src=https://www.ikea.com/in/en/images/products/eket-wall-mounted-cabinet-combination-white__0553682_pe659502_s5.jpg?f=xs

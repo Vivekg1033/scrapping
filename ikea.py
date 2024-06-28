@@ -307,24 +307,24 @@ try:
 except TimeoutException:
     print("Cookie consent dialog did not appear or could not be clicked.")
 
-# # Click "Show more" button until it's no longer clickable
-# while True:
-#     try:
-#         smbtn = WebDriverWait(driver, 10).until(
-#             EC.element_to_be_clickable((By.CSS_SELECTOR, ".plp-btn.plp-btn--small.plp-btn--secondary"))
-#         )
-#         smbtn.click()
-#         time.sleep(2)  # Give time for more products to load
-#     except TimeoutException:
-#         print("No more 'Show more' button to click.")
-#         break
+# Click "Show more" button until it's no longer clickable
+while True:
+    try:
+        smbtn = WebDriverWait(driver, 10).until(
+            EC.element_to_be_clickable((By.CSS_SELECTOR, ".plp-btn.plp-btn--small.plp-btn--secondary"))
+        )
+        smbtn.click()
+        time.sleep(2)  # Give time for more products to load
+    except TimeoutException:
+        print("No more 'Show more' button to click.")
+        break
 
 # Find all product elements
 products = driver.find_elements(By.CLASS_NAME, "plp-price-module__information")
 
 # Limit to the first 10 products if there are more
 
-products = products[:2]
+#products = products[:2]
 for i in range(len(products)):
     try:
         # Find all product elements again in case the page changed
